@@ -1,0 +1,33 @@
+require:
+  - rubocop-rails
+  - rubocop-performance
+
+Layout/ClassStructure:
+  Enabled: true
+
+Metrics/LineLength:
+  Max: 120
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+AllCops:
+  Exclude:
+    - 'bin/*'
+    - 'db/*'
+    - 'db/migrate/*'
+    - 'node_modules/**/*'
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'test/channels/application_cable/connection_test.rb'
+    - 'test/test_helper.rb'

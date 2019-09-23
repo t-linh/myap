@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class UserMailerTest < ActionMailer::TestCase
   test "account_activation" do
@@ -14,5 +14,4 @@ class UserMailerTest < ActionMailer::TestCase
     user.reset_token = User.new_token
     UserMailer.password_reset(user)
   end
-
 end
